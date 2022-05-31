@@ -1,0 +1,52 @@
+
+/* propiedades-estilos header */
+
+
+header{
+    background: linear-gradient(rgba(255, 255, 0, 0.151), rgb(202, 238, 247)), url(../img/imgpuente.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+    .logo{
+        transform: scale(.8);
+    }
+    .navHeaderLocal{
+        width: 100%;
+        ul{
+            margin: 0;
+            width: 100%;
+            padding: 0;
+            list-style: none;
+            .lineaSeparador{
+                border-bottom: 2px solid greenyellow;
+            }
+            .bloqueUno{
+                display: flex;
+                background-color: rgba(0, 4, 252, 0.13);
+                justify-content: space-evenly;
+                li{
+                    padding: .3rem;
+                    a{
+                        @extend .aNavHeader-Footer;
+                    }
+                }
+            }
+            .bloqueDos{
+                @extend .bloqueUno;
+            }
+        }
+    }
+    animation-duration: 1s;
+    animation-name: aparecelogo;
+    @keyframes aparecelogo {
+        from {
+          opacity: 0%;
+        }
+        to {
+          opacity: 100%;
+        }
+    }
+}

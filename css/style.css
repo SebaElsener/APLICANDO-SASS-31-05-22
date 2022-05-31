@@ -1,0 +1,500 @@
+@charset "UTF-8";
+.aNavHeader-Footer, header .navHeaderLocal ul .bloqueUno li a, header .navHeaderLocal ul .bloqueDos li a, footer .navFooterLocal ul li a {
+  color: #696767;
+  font-weight: bolder;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1rem;
+  text-decoration: none; }
+
+/* reset */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+body {
+  background: linear-gradient(#caeef7, rgba(255, 255, 0, 0.151)); }
+
+/* sobreescribiendo los estilos bootstrap formulario trivia html index */
+.formularioTrivia {
+  padding: 5%;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: .8rem;
+  font-weight: normal;
+  line-height: normal; }
+  .formularioTrivia .formLocal legend {
+    float: none;
+    width: auto;
+    font-size: 1.3rem;
+    margin: 0;
+    line-height: normal; }
+    .formularioTrivia .formLocal legend input {
+      font-size: small; }
+
+.edicAnteriores {
+  padding: .5rem;
+  margin-left: .5rem;
+  background-color: #d4ffb7;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: .3rem;
+  justify-content: center; }
+  .edicAnteriores .tituloAside {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: .5rem;
+    color: cadetblue;
+    font-size: 1.2rem;
+    text-align: center; }
+  .edicAnteriores .edicion1, .edicAnteriores .edicion2 {
+    display: inline; }
+    .edicAnteriores .edicion1 a img, .edicAnteriores .edicion2 a img {
+      border: 1px solid gray; }
+
+/* estilos aside redes sociales, bootstrap adaptado al proyecto */
+.redesSociales {
+  padding: 2rem; }
+  .redesSociales .iconoFacebook, .redesSociales .iconoWp, .redesSociales .iconoTw, .redesSociales .iconoInsta {
+    width: 3rem;
+    margin: 1rem;
+    border-radius: .7rem;
+    transition: .5s; }
+  .redesSociales button {
+    font-size: 1.3rem; }
+  .redesSociales .iconoFacebook:hover {
+    background-color: #517fd3;
+    transform: translateY(-0.3rem) scale(1.07);
+    box-shadow: 0px 0px 15px 5px #517fd3; }
+  .redesSociales .iconoWp:hover {
+    background-color: #18a018;
+    transform: translateY(-0.3rem) scale(1.07);
+    box-shadow: 0px 0px 15px 5px #18a018; }
+  .redesSociales .iconoTw:hover {
+    background-color: #00c3ff;
+    transform: translateY(-0.3rem) scale(1.07);
+    box-shadow: 0px 0px 15px 5px #00c3ff; }
+  .redesSociales .iconoInsta:hover {
+    background-color: #f82ef8;
+    transform: translateY(-0.3rem) scale(1.07);
+    box-shadow: 0px 0px 15px 5px #f82ef8; }
+  .redesSociales .offcanvas {
+    width: 75%;
+    padding: 3rem;
+    text-align: center;
+    background-color: rgba(254, 255, 225, 0.644);
+    border-radius: 0 2rem 0 0;
+    justify-content: center; }
+
+/* propiedades-estilos header */
+header {
+  background: linear-gradient(rgba(255, 255, 0, 0.151), #caeef7), url(../img/imgpuente.jpg);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  justify-content: center;
+  align-items: center;
+  animation-duration: 1s;
+  animation-name: aparecelogo; }
+  header .logo {
+    transform: scale(0.8); }
+  header .navHeaderLocal {
+    width: 100%; }
+    header .navHeaderLocal ul {
+      margin: 0;
+      width: 100%;
+      padding: 0;
+      list-style: none; }
+      header .navHeaderLocal ul .lineaSeparador {
+        border-bottom: 2px solid greenyellow; }
+      header .navHeaderLocal ul .bloqueUno, header .navHeaderLocal ul .bloqueDos {
+        display: flex;
+        background-color: rgba(0, 4, 252, 0.13);
+        justify-content: space-evenly; }
+        header .navHeaderLocal ul .bloqueUno li, header .navHeaderLocal ul .bloqueDos li {
+          padding: .3rem; }
+
+@keyframes aparecelogo {
+  from {
+    opacity: 0%; }
+  to {
+    opacity: 100%; } }
+
+/* propiedades-estilos main index mobile first 360x740px */
+.grillaPpal {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "tituloPrincipal tituloPrincipal" "noticiaUno noticiaDos" "noticiaTres noticiaCuatro" "formularioTrivia formularioTrivia" "edicAnteriores redesSociales";
+  justify-content: space-around;
+  text-align: center; }
+  .grillaPpal .tituloPrincipal {
+    grid-area: tituloPrincipal;
+    color: #14b6a0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.8rem;
+    text-shadow: 0.1rem 0.1rem 0.2rem rgba(128, 128, 128, 0.767);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: normal;
+    text-align: center; }
+  .grillaPpal .noticiaUno {
+    grid-area: noticiaUno; }
+  .grillaPpal .noticiaDos {
+    grid-area: noticiaDos; }
+  .grillaPpal .noticiaTres {
+    margin-top: .5rem;
+    grid-area: noticiaTres; }
+  .grillaPpal .noticiaCuatro {
+    margin-top: .5rem;
+    grid-area: noticiaCuatro; }
+  .grillaPpal .noticiaCinco, .grillaPpal .noticiaSeis {
+    display: none; }
+  .grillaPpal .formularioTrivia {
+    grid-area: formularioTrivia; }
+  .grillaPpal .edicAnteriores {
+    grid-area: edicAnteriores; }
+  .grillaPpal .redesSociales {
+    grid-area: redesSociales; }
+  .grillaPpal .cajaIframe {
+    width: 95%; }
+  .grillaPpal .tituloNoticia {
+    width: 95%;
+    height: fit-content; }
+  .grillaPpal .tituloNoticia, .grillaPpal .tituloNoticiaSecciones {
+    text-decoration: none;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgba(0, 0, 0, 0.671);
+    margin: 0;
+    font-weight: bold;
+    line-height: normal; }
+  .grillaPpal .redesSociales {
+    grid-area: redesSociales; }
+
+/* propiedades-estilos footer */
+footer {
+  margin-top: 3%;
+  padding: .5rem;
+  background: linear-gradient(#caeef7, rgba(255, 255, 0, 0.151)); }
+  footer .navFooterLocal ul {
+    /* este estilo pisa el estilo ul de bootstrap para que no quede desacomodado el footer */
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+    line-height: normal;
+    font-family: 'Courier New', Courier, monospace; }
+    footer .navFooterLocal ul li {
+      list-style: none; }
+
+/* estilos html acerca de */
+.container-fluid {
+  height: 100vh; }
+  .container-fluid .row {
+    justify-content: center; }
+    .container-fluid .row nav {
+      text-align: center; }
+      .container-fluid .row nav ul {
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+        background-color: #818181;
+        border-radius: 5px; }
+        .container-fluid .row nav ul li {
+          list-style-type: none;
+          text-decoration: none;
+          transition: .7s; }
+          .container-fluid .row nav ul li:hover {
+            background-color: #00b7ff; }
+          .container-fluid .row nav ul li a {
+            text-decoration: none;
+            color: aliceblue; }
+    .container-fluid .row .cajaAcercaDe {
+      background-color: #eeeeee;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 25px;
+      width: 340px;
+      height: 230px;
+      text-align: center;
+      border-radius: 25px;
+      margin-top: 6rem;
+      margin-bottom: 2rem;
+      box-shadow: 2px 1px 10px 1px gray; }
+      .container-fluid .row .cajaAcercaDe .animate__animated {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: white;
+        text-shadow: 2px 2px 10px gray;
+        font-size: 2rem; }
+      .container-fluid .row .cajaAcercaDe .derechosAcercaDe {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 1rem;
+        color: rgba(0, 0, 0, 0.692); }
+      .container-fluid .row .cajaAcercaDe .mailAcercaDe {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #ff802b;
+        font-size: 1rem; }
+      .container-fluid .row .cajaAcercaDe .disenoWeb {
+        font-size: 1.4rem; }
+
+/* estilos formulario html contacto con bootstrap */
+.mainContac {
+  height: 34rem; }
+  .mainContac .formularioContacto {
+    height: auto;
+    padding: 1.5rem;
+    margin: 2rem;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.473);
+    text-align: center; }
+    .mainContac .formularioContacto h1 {
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      font-size: 1.2rem;
+      color: rgba(255, 102, 0, 0.815);
+      margin-bottom: 1rem;
+      text-align: center; }
+    .mainContac .formularioContacto form .form-check-label {
+      font-size: .8rem;
+      text-align: left; }
+    .mainContac .formularioContacto form .mb-3 {
+      font-size: 1rem; }
+    .mainContac .formularioContacto form button {
+      background-color: #c1e3ff;
+      border: none;
+      font-weight: bold;
+      color: rgba(0, 0, 0, 0.603);
+      transition: background-color .7s; }
+      .mainContac .formularioContacto form button:hover {
+        background-color: rgba(255, 102, 0, 0.815);
+        color: rgba(0, 0, 0, 0.603); }
+
+/* propiedades-estilos para noticias de los html de las secciones deportivas */
+.cajaNoticia {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 7%; }
+  .cajaNoticia .tituloSecundario {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: coral;
+    margin-bottom: 5%; }
+  .cajaNoticia .fotoNoticia {
+    width: 60%;
+    height: auto;
+    align-self: center; }
+  .cajaNoticia .tituloNoticiaSecciones {
+    margin-top: 5%;
+    font-size: 1.2rem; }
+  .cajaNoticia .textoNoticia {
+    margin-top: 2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: small; }
+
+@media screen and (min-width: 600px) {
+  .cajaIframe {
+    height: 15rem; }
+  header .navHeaderLocal ul .bloqueUno li a, header .navHeaderLocal ul .bloqueDos li a {
+    font-size: 1.5rem; }
+  .grillaPpal .tituloPrincipal {
+    font-size: 2rem; }
+  footer .navFooterLocal ul li {
+    padding: 1.5rem; }
+    footer .navFooterLocal ul li a {
+      font-size: 1.5rem; }
+  .formularioTrivia {
+    font-size: 1.3rem; }
+    .formularioTrivia .formLocal {
+      align-content: center; }
+      .formularioTrivia .formLocal legend {
+        font-size: 1.6rem; }
+  .edicAnteriores .tituloAside {
+    font-size: 1.3rem; }
+  .edicAnteriores .edicion1 a img, .edicAnteriores .edicion2 a img, .edicAnteriores .edicion2 a img {
+    border: 1px solid gray;
+    transform: scale(1.3);
+    margin: 1rem; }
+  .redesSociales button {
+    font-size: 1.6rem; } }
+
+@media screen and (min-width: 1000px) {
+  .cajaIframe {
+    height: 18rem; } }
+
+/* query tablet 800px hasta 1024px */
+@media screen and (min-width: 800px) {
+  /* estilos header y demás html */
+  header {
+    height: 18rem; }
+    header .logo {
+      transform: scale(1);
+      margin: 2rem; }
+  .grillaPpal {
+    grid-template-areas: "tituloPrincipal tituloPrincipal" "noticiaUno noticiaDos" "noticiaTres noticiaCuatro" "noticiaCinco noticiaSeis" "formularioTrivia formularioTrivia" "edicAnteriores redesSociales";
+    gap: .5rem;
+    padding: 1%; }
+    .grillaPpal .tituloPrincipal {
+      font-size: 3rem;
+      text-shadow: 0.2rem 0.2rem 0.3rem rgba(128, 128, 128, 0.767); }
+    .grillaPpal .noticiaCinco, .grillaPpal .noticiaSeis {
+      display: block; }
+    .grillaPpal .noticiaCinco {
+      grid-area: noticiaCinco;
+      margin-top: .5rem; }
+    .grillaPpal .noticiaSeis {
+      grid-area: noticiaSeis;
+      margin-top: .5rem; }
+    .grillaPpal .tituloNoticia {
+      font-size: 1.5rem; }
+    .grillaPpal .formularioTrivia {
+      font-size: 1.6rem; }
+    .grillaPpal .tituloAside {
+      font-size: 1.5rem; }
+    .grillaPpal .iconoFacebook, .grillaPpal .iconoWp, .grillaPpal .iconoTw, .grillaPpal .iconoInsta {
+      width: 4rem;
+      margin: 1rem; }
+    .grillaPpal .offcanvas {
+      width: fit-content; }
+  /* estilos secciones deportivas demás html */
+  .tituloSecundario {
+    font-size: 1.8rem;
+    margin-bottom: 1%; }
+  .tituloNoticiaSecciones {
+    font-size: 1.5rem; }
+  .textoNoticia {
+    margin-top: 1rem;
+    font-size: 1.2rem; }
+  .mainNoticiashtml {
+    height: auto; }
+  /* estilos html contacto 800px */
+  .mainContac {
+    height: 50rem;
+    padding: 5rem; }
+    .mainContac .formularioContacto h1 {
+      font-size: 2.2rem; }
+    .mainContac .formularioContacto form .form-label {
+      font-size: 1.5rem; }
+    .mainContac .formularioContacto form .form-check-label {
+      font-size: 1.2rem; }
+    .mainContac .formularioContacto form button {
+      font-size: 1.5rem; }
+  /* estilos acercade 800px */
+  .cajaAcercaDe {
+    width: 400px;
+    height: 290px; }
+    .cajaAcercaDe .derechosAcercaDe {
+      font-size: 1.3rem; }
+    .cajaAcercaDe .mailAcercaDe {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #ff802b;
+      font-size: 1.3rem; }
+    .cajaAcercaDe .disenoWeb {
+      font-size: 2rem; }
+    .cajaAcercaDe .animate__animated {
+      font-size: 3rem; }
+  .container-fluid main nav ul li a {
+    font-size: 1.3rem; } }
+
+/* query desktop 1024px */
+@media screen and (min-width: 1024px) {
+  /* estilos header index y demás html */
+  header {
+    height: 30rem; }
+    header .logo {
+      transform: scale(1.3);
+      margin-bottom: 5rem; }
+    header .navHeaderLocal ul .bloqueUno li, header .navHeaderLocal ul .bloqueDos li {
+      width: 100%;
+      text-align: center;
+      transition: all .7s; }
+      header .navHeaderLocal ul .bloqueUno li:hover, header .navHeaderLocal ul .bloqueDos li:hover {
+        background-color: greenyellow; }
+      header .navHeaderLocal ul .bloqueUno li a, header .navHeaderLocal ul .bloqueDos li a {
+        font-size: 1.6rem;
+        transition: all .7s; }
+        header .navHeaderLocal ul .bloqueUno li a:hover, header .navHeaderLocal ul .bloqueDos li a:hover {
+          color: #d8d8d8;
+          text-shadow: 0px 0px 6px black; }
+  .grillaPpal {
+    grid-template-areas: "tituloPrincipal tituloPrincipal tituloPrincipal redesSociales" "noticiaUno noticiaDos noticiaTres formularioTrivia" "noticiaCuatro noticiaCinco noticiaSeis edicAnteriores";
+    grid-template-rows: .5fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr); }
+    .grillaPpal .tituloPrincipal {
+      font-size: 3.4rem;
+      text-shadow: 0.2rem 0.2rem 0.3rem rgba(128, 128, 128, 0.767); }
+    .grillaPpal .noticiaUno, .grillaPpal .noticiaDos, .grillaPpal .noticiaTres, .grillaPpal .noticiaCuatro, .grillaPpal .noticiaCinco, .grillaPpal .noticiaSeis {
+      margin-top: 0%; }
+    .grillaPpal .tituloNoticia {
+      font-size: 1.3rem; }
+    .grillaPpal .tituloAside {
+      margin: 0%; }
+    .grillaPpal .cajaIframe {
+      width: 100%;
+      height: 14rem;
+      transition: border-radius .7s, opacity .7s; }
+      .grillaPpal .cajaIframe:hover {
+        border-radius: 1rem;
+        opacity: 55%; }
+    .grillaPpal .formularioTrivia {
+      margin-left: 2rem;
+      height: 17rem;
+      padding: 0;
+      font-size: 1.2rem;
+      background-color: rgba(235, 235, 235, 0.979); }
+      .grillaPpal .formularioTrivia form {
+        padding: 1rem; }
+        .grillaPpal .formularioTrivia form legend {
+          font-size: 1.2rem; }
+    .grillaPpal .edicAnteriores {
+      margin-left: 2rem;
+      height: 15rem;
+      align-items: center;
+      gap: 1rem;
+      padding: 0;
+      border-radius: 0; }
+      .grillaPpal .edicAnteriores .tituloAside {
+        font-size: 1.2rem; }
+  footer .navFooterLocal {
+    height: 7rem; }
+    footer .navFooterLocal ul {
+      align-items: center;
+      height: 100%; }
+      footer .navFooterLocal ul .footerContacto {
+        text-align: center;
+        padding: 0;
+        width: 10rem; }
+        footer .navFooterLocal ul .footerContacto:hover {
+          border-left: 3px double #71bd00;
+          border-right: 3px double #71bd00; }
+      footer .navFooterLocal ul .footerAcercade {
+        text-align: center;
+        padding: 0;
+        width: 20rem; }
+        footer .navFooterLocal ul .footerAcercade:hover {
+          border-left: 3px double #71bd00;
+          border-right: 3px double #71bd00; }
+      footer .navFooterLocal ul a {
+        font-size: 1.6rem;
+        transition: all .7s; }
+        footer .navFooterLocal ul a:hover {
+          color: #d8d8d8;
+          text-shadow: 0px 0px 6px black; }
+  /* estilos secciones deportivas de los demás html */
+  .tituloSecundario {
+    margin: 0%;
+    font-size: 2.2rem; }
+  .tituloNoticiaSecciones {
+    margin: 0%;
+    font-size: 1.5rem; }
+  .textoNoticia {
+    font-size: 1.2rem; }
+  .mainNoticiashtml {
+    height: auto; }
+  /* estilos html contacto 1024px */
+  .mainContac {
+    padding: 7rem;
+    height: auto; } }

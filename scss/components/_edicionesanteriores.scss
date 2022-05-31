@@ -1,0 +1,31 @@
+
+
+.edicAnteriores{
+    .tituloAside{
+        font-family: $tipografiaNavs;
+        margin-bottom: .5rem;
+        color: cadetblue;
+        font-size: $sizeTipoNavs +.2;
+        text-align: center;
+    }
+    padding: .5rem;
+    margin-left: .5rem;
+    background-color: rgb(212, 255, 183);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+    justify-content: center;
+    .edicion1{
+        display: inline;
+        & a {
+            & img {
+                border: 1px solid gray;
+            }
+        }        
+    }
+    .edicion2{
+        @extend .edicion1
+    }
+}
+

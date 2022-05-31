@@ -1,0 +1,345 @@
+
+// media queries para escalar cajas iframes y evitar deformaciones entre 600px y 1024px, también acomoda asides y otros estilos //
+@media screen and (min-width: 600px) {
+    .cajaIframe{
+        height: 15rem;
+    }
+
+    header{
+        .navHeaderLocal{
+            ul{
+                .bloqueUno{
+                    li{
+                        a{
+                            font-size: $sizeTipoNavs +.5;
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+
+    .grillaPpal{
+        .tituloPrincipal{
+            font-size: 2rem;
+        }
+    }
+
+    footer{
+        .navFooterLocal{
+            ul{
+                li{
+                    padding: 1.5rem;
+                    a{
+                        font-size: $sizeTipoNavs +.5;
+                    }                
+                }
+            }   
+        }
+    }
+
+    .formularioTrivia{
+        font-size: 1.3rem;
+        .formLocal{
+            align-content: center;
+            legend{
+            font-size: 1.6rem;
+            }
+        }
+    }
+
+    .edicAnteriores{
+        .tituloAside{
+            font-size: $sizeTipoNavs +.3;
+        }
+        .edicion1, .edicion2{
+            a {
+                img {
+                    border: 1px solid gray;
+                    transform: scale(1.3);
+                    margin: 1rem;
+                }
+            }
+        }
+    }
+
+    .redesSociales{
+        button{
+            font-size: 1.6rem;
+        }
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .cajaIframe{
+        height: 18rem;
+    }
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////
+
+/* query tablet 800px hasta 1024px */
+
+@media screen and (min-width: 800px) {
+    /* estilos header y demás html */
+    header{
+        height: 18rem;
+        .logo{
+            transform: scale(1);
+            margin: 2rem;
+        }
+    }
+
+    .grillaPpal{
+        grid-template-areas:
+            "tituloPrincipal tituloPrincipal"
+            "noticiaUno noticiaDos"
+            "noticiaTres noticiaCuatro"
+            "noticiaCinco noticiaSeis"
+            "formularioTrivia formularioTrivia"
+            "edicAnteriores redesSociales";
+        gap: .5rem;
+        padding: 1%;
+        .tituloPrincipal{
+            font-size: 3rem;
+            text-shadow: .2rem .2rem .3rem rgba(128, 128, 128, 0.767);
+        }  
+        .noticiaCinco, .noticiaSeis{
+            display: block;
+        }
+        .noticiaCinco{
+            grid-area: noticiaCinco;
+            margin-top: .5rem;
+        }
+        .noticiaSeis{
+            grid-area: noticiaSeis;
+            margin-top: .5rem;
+        }
+        .tituloNoticia{
+             font-size: 1.5rem;
+         }
+        .formularioTrivia{
+            font-size: 1.6rem;
+        }
+        .tituloAside{
+            font-size: 1.5rem;
+        }
+        .iconoFacebook, .iconoWp, .iconoTw, .iconoInsta{
+            width: 4rem;
+            margin: 1rem;
+        }
+        .offcanvas{
+            width:fit-content;
+        }
+    }
+    
+        /* estilos secciones deportivas demás html */
+        .tituloSecundario{
+            font-size: 1.8rem;
+            margin-bottom: 1%;
+        }
+        .tituloNoticiaSecciones{
+            font-size: 1.5rem;
+        }
+        .textoNoticia{
+            margin-top: 1rem;
+            font-size: 1.2rem;
+        }
+        .mainNoticiashtml{
+            height: auto;
+        }
+
+        /* estilos html contacto 800px */
+        .mainContac{
+            height: 50rem;
+            padding: 5rem;
+            .formularioContacto{
+                h1{
+                    font-size: 2.2rem;
+                }
+                form{
+                    .form-label{
+                        font-size: 1.5rem;
+                    }
+                    .form-check-label{
+                        font-size: 1.2rem;
+                    }
+                    button{
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    
+        /* estilos acercade 800px */
+        .cajaAcercaDe{
+            width: 400px;
+            height: 290px;
+            .derechosAcercaDe{
+                font-size: 1.3rem;
+            }
+            .mailAcercaDe{
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                color: rgb(255, 128, 43);
+                font-size: 1.3rem;
+            }
+            .disenoWeb{
+                font-size: 2rem;
+            }
+            .animate__animated{
+                font-size: 3rem;
+            }
+        }
+
+        .container-fluid main nav ul li a{
+            font-size: 1.3rem;
+        }
+}
+
+/* query desktop 1024px */
+@media screen and (min-width: 1024px) {
+    /* estilos header index y demás html */
+    header{
+        height: 30rem;
+
+        .logo{
+            transform: scale(1.3);
+            margin-bottom: 5rem;
+        }
+
+        .navHeaderLocal{
+            ul{
+                .bloqueUno{
+                    li{
+                        width: 100%;
+                        text-align: center;
+                        transition: all .7s;
+                        &:hover{
+                            // background-color: rgb(113, 189, 0);
+                            background-color: greenyellow;
+                        }
+                        a{
+                            @include aTransitionHeader-Footer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .grillaPpal{
+        grid-template-areas:
+            "tituloPrincipal tituloPrincipal tituloPrincipal redesSociales"
+            "noticiaUno noticiaDos noticiaTres formularioTrivia"
+            "noticiaCuatro noticiaCinco noticiaSeis edicAnteriores";
+        grid-template-rows: .5fr 1fr 1fr;
+        grid-template-columns: repeat(4, 1fr);
+        .tituloPrincipal{
+            font-size: 3.4rem;
+            text-shadow: .2rem .2rem .3rem rgba(128, 128, 128, 0.767);
+        }
+        .noticiaUno, .noticiaDos, .noticiaTres, .noticiaCuatro, .noticiaCinco, .noticiaSeis{
+            margin-top: 0%;
+        }
+        .tituloNoticia{
+            font-size: 1.3rem;
+        }
+        .tituloAside{
+            margin: 0%;
+        }
+        .cajaIframe{
+            width: 100%;
+            height: 14rem;
+            transition: border-radius .7s, opacity .7s;
+            &:hover{
+                border-radius: 1rem;
+                opacity: 55%;
+            }
+        }
+        .formularioTrivia{
+            margin-left: 2rem;
+            height: 17rem;
+            padding: 0;
+            font-size: 1.2rem;
+            background-color: rgba(235, 235, 235, 0.979);
+            form{
+                padding: 1rem;
+                legend{
+                    font-size: 1.2rem;
+                }
+
+            }
+        }
+        .edicAnteriores{
+            margin-left: 2rem;
+            height: 15rem;
+            align-items: center;
+            gap: 1rem;
+            padding: 0;
+            border-radius: 0;
+            .tituloAside{
+                font-size: 1.2rem;
+            }
+
+        }   
+    }
+    
+    footer{
+        .navFooterLocal{
+        height: 7rem;
+            ul{
+                align-items: center;
+                height: 100%;
+                .footerContacto{
+                    text-align: center;
+                    padding: 0;
+                    width: 10rem;
+                    &:hover{
+                        border-left: 3px double rgb(113, 189, 0);
+                        border-right: 3px double rgb(113, 189, 0);
+                    }
+                }
+                .footerAcercade{
+                    text-align: center;
+                    padding: 0;
+                    width: 20rem;
+                    &:hover{
+                        border-left: 3px double rgb(113, 189, 0);
+                        border-right: 3px double rgb(113, 189, 0);
+                    }
+                }
+                a{
+                    @include aTransitionHeader-Footer;
+                }
+            }
+        }
+    }
+
+    /* estilos secciones deportivas de los demás html */
+    .tituloSecundario{
+        margin: 0%;
+        font-size: 2.2rem;
+    }
+
+    .tituloNoticiaSecciones{
+        margin: 0%;
+        font-size: 1.5rem;
+    }
+
+    .textoNoticia{
+        font-size: 1.2rem;
+    }
+
+    .mainNoticiashtml{
+        height: auto;
+    }
+
+    /* estilos html contacto 1024px */
+    .mainContac{
+        padding: 7rem;
+        height: auto;
+    }
+
+}
+

@@ -1,0 +1,89 @@
+
+/* propiedades-estilos main index mobile first 360x740px */
+
+// Grid main noticias //
+.grillaPpal{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "tituloPrincipal tituloPrincipal"
+        "noticiaUno noticiaDos"
+        "noticiaTres noticiaCuatro"
+        "formularioTrivia formularioTrivia"
+        "edicAnteriores redesSociales";
+    justify-content: space-around;
+    text-align: center;
+    .tituloPrincipal{
+        grid-area: tituloPrincipal;
+        color: rgb(20, 182, 160);
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 1.8rem;
+        text-shadow: .1rem .1rem .2rem rgba(128, 128, 128, 0.767);
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        font-weight: bold;
+        line-height: normal;
+        text-align: center;
+    }
+    .noticiaUno{
+        grid-area: noticiaUno;
+    }
+    
+    .noticiaDos{
+        grid-area: noticiaDos;
+    }
+    
+    .noticiaTres{
+        margin-top: .5rem;
+        grid-area: noticiaTres;
+    }
+    
+    .noticiaCuatro{
+        margin-top: .5rem;
+        grid-area: noticiaCuatro;
+    }
+    
+    .noticiaCinco, .noticiaSeis{
+        display: none;
+    }
+    
+    .formularioTrivia{
+        grid-area: formularioTrivia;
+    }
+    
+    .edicAnteriores{
+        grid-area: edicAnteriores;
+    }
+    
+    .redesSociales{
+        grid-area: redesSociales;
+    }
+    
+    .cajaIframe{
+        width: 95%;
+    }
+
+    .tituloNoticia{
+        width: 95%;
+        height: fit-content
+    }
+    
+    .tituloNoticia, .tituloNoticiaSecciones{
+        text-decoration: none;
+        font-size: 1rem;
+        font-family: Arial, Helvetica, sans-serif;
+        color: rgba(0, 0, 0, 0.671);
+        margin: 0;
+        font-weight: bold;
+        line-height: normal;
+    }
+    
+    .redesSociales{
+        grid-area: redesSociales;
+    }
+}
+
+
+
+
+
